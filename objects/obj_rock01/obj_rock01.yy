@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Town Background",
-    "path": "folders/Objects/Town Background.yy",
+    "name": "Town Details",
+    "path": "folders/Objects/Town Details.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_rock01",
