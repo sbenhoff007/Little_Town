@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player_idle_down",
-    "path": "sprites/spr_player_idle_down/spr_player_idle_down.yy",
+    "name": "spr_barrel01",
+    "path": "sprites/spr_barrel01/spr_barrel01.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,18 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Town Background",
+    "path": "folders/Objects/Town Background.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player",
+  "name": "obj_barrel01",
   "tags": [],
   "resourceType": "GMObject",
 }
