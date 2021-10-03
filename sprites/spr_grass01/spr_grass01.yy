@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Town Background",
-    "path": "folders/Sprites/Town Background.yy",
+    "name": "Town Details",
+    "path": "folders/Sprites/Town Details.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_grass01",
