@@ -19,6 +19,7 @@
     {"id":{"name":"spr_barrel01","path":"sprites/spr_barrel01/spr_barrel01.yy",},"order":1,},
     {"id":{"name":"spr_townTiles","path":"sprites/spr_townTiles/spr_townTiles.yy",},"order":8,},
     {"id":{"name":"obj_barrel01","path":"objects/obj_barrel01/obj_barrel01.yy",},"order":0,},
+    {"id":{"name":"obj_par_environment","path":"objects/obj_par_environment/obj_par_environment.yy",},"order":1,},
     {"id":{"name":"spr_player_idle_left","path":"sprites/spr_player_idle_left/spr_player_idle_left.yy",},"order":1,},
     {"id":{"name":"rm_gameMain","path":"rooms/rm_gameMain/rm_gameMain.yy",},"order":0,},
   ],
