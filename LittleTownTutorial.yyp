@@ -30,6 +30,7 @@
     {"id":{"name":"snd_seq_good02_BGM","path":"sounds/snd_seq_good02_BGM/snd_seq_good02_BGM.yy",},"order":11,},
     {"id":{"name":"snd_gameOver","path":"sounds/snd_gameOver/snd_gameOver.yy",},"order":1,},
     {"id":{"name":"spr_baker_idle_down","path":"sprites/spr_baker_idle_down/spr_baker_idle_down.yy",},"order":0,},
+    {"id":{"name":"obj_item01","path":"objects/obj_item01/obj_item01.yy",},"order":1,},
     {"id":{"name":"snd_seq_bad02_BGM","path":"sounds/snd_seq_bad02_BGM/snd_seq_bad02_BGM.yy",},"order":8,},
     {"id":{"name":"snd_pop01","path":"sounds/snd_pop01/snd_pop01.yy",},"order":5,},
     {"id":{"name":"snd_greeting01","path":"sounds/snd_greeting01/snd_greeting01.yy",},"order":2,},
