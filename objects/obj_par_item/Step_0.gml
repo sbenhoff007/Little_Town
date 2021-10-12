@@ -1,3 +1,8 @@
 /// @description Depth Sorting
-// Depth sorting
-depth =-y;
+// Depth, animation
+switch myState {
+	// If item is sitting on the ground
+	case itemState.idle: {
+		depth =-y;
+	}; break;
+}
