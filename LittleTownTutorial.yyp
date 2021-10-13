@@ -70,6 +70,7 @@
     {"id":{"name":"spr_item03","path":"sprites/spr_item03/spr_item03.yy",},"order":3,},
     {"id":{"name":"spr_player_carryIdle_down","path":"sprites/spr_player_carryIdle_down/spr_player_carryIdle_down.yy",},"order":22,},
     {"id":{"name":"spr_item05","path":"sprites/spr_item05/spr_item05.yy",},"order":5,},
+    {"id":{"name":"scr_itemControl","path":"scripts/scr_itemControl/scr_itemControl.yy",},"order":1,},
     {"id":{"name":"spr_player_carryIdle_left","path":"sprites/spr_player_carryIdle_left/spr_player_carryIdle_left.yy",},"order":23,},
     {"id":{"name":"spr_player_putDown_up","path":"sprites/spr_player_putDown_up/spr_player_putDown_up.yy",},"order":17,},
     {"id":{"name":"spr_player_pickUp_left","path":"sprites/spr_player_pickUp_left/spr_player_pickUp_left.yy",},"order":11,},
