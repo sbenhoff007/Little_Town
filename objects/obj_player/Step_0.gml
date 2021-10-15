@@ -13,8 +13,8 @@ if (global.playerControl == false) {
 }
 
 // Calculate movement
-vx = ((moveRight - moveLeft) * walkSpeed);
-vy = ((moveDown - moveUp) * walkSpeed);
+vx = ((moveRight - moveLeft) * walkSpeed * (1-carryLimit));
+vy = ((moveDown - moveUp) * walkSpeed * (1-carryLimit));
 
 // If Idle
 if (vx == 0 && vy == 0) {
