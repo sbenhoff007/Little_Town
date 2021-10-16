@@ -18,6 +18,10 @@ nearbyItem = noone;
 itemPrompt = noone;
 carryLimit = 0;
 myState = playerState.idle;
+runSpeed = 0;
+runMax = 12;
+running = false;
+startDust = 0;
 
 // Create listener and set orientation
 audio_listener_set_position(0,x,y,0);

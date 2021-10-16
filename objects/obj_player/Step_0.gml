@@ -12,9 +12,33 @@ if (global.playerControl == false) {
 	moveDown = 0;
 }
 
+// Run with Shift key
+running = keyboard_check(vk_shift);
+
+// Speed up if running
+if (running == true) {
+	// Ramp up
+	if (runSpeed < runMax) {
+		runSpeed += 2;
+	}
+	// Start creating dust
+	if (startDust == 0) {
+		alarm[0] = 2;
+		startDust = 1;
+	}
+}
+// Slow down if no longer running
+if (running == false) {
+	// Ramp down
+	if (runSpeed > 0) {
+		runSpeed -= 1;
+	}
+	startDust = 0;
+}
+
 // Calculate movement
-vx = ((moveRight - moveLeft) * walkSpeed * (1-carryLimit));
-vy = ((moveDown - moveUp) * walkSpeed * (1-carryLimit));
+vx = ((moveRight - moveLeft) * (walkSpeed+runSpeed) * (1-carryLimit));
+vy = ((moveDown - moveUp) * (walkSpeed+runSpeed) * (1-carryLimit));
 
 // If Idle
 if (vx == 0 && vy == 0) {
