@@ -32,6 +32,7 @@
     {"id":{"name":"font_textbox","path":"fonts/font_textbox/font_textbox.yy",},"order":0,},
     {"id":{"name":"snd_itemPickup","path":"sounds/snd_itemPickup/snd_itemPickup.yy",},"order":3,},
     {"id":{"name":"spr_store01","path":"sprites/spr_store01/spr_store01.yy",},"order":7,},
+    {"id":{"name":"seq_baker_sad","path":"sequences/seq_baker_sad/seq_baker_sad.yy",},"order":1,},
     {"id":{"name":"seq_baker_happy","path":"sequences/seq_baker_happy/seq_baker_happy.yy",},"order":0,},
     {"id":{"name":"obj_fountain01","path":"objects/obj_fountain01/obj_fountain01.yy",},"order":3,},
     {"id":{"name":"spr_seq_bgEffect01","path":"sprites/spr_seq_bgEffect01/spr_seq_bgEffect01.yy",},"order":6,},
