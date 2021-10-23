@@ -149,7 +149,7 @@ if !nearbyNPC {
 	}
 	// Get rid of prompt
 	scr_dismissPrompt(npcPrompt,0);
-	show_debug_message("obj_player hasn't found anything");
+	//show_debug_message("obj_player hasn't found anything");
 }
 
 // Check for collision with Items
