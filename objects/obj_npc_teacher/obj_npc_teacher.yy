@@ -35,6 +35,7 @@
     {"propertyId":{"name":"itemTextDone","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"\"Thanks to you, I could teach all day!\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"sequenceHappy","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"seq_teacher_happy","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"sequenceSad","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"seq_teacher_sad","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"doneSprite","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"spr_teacher_happy","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "NPCs",

@@ -35,6 +35,7 @@
     {"propertyId":{"name":"itemTextDone","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"\"With that watering can, now my veggies will be perfect!\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"sequenceHappy","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"seq_grocer_happy","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"sequenceSad","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"seq_grocer_sad","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"doneSprite","path":"objects/obj_par_npc/obj_par_npc.yy",},"objectId":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"value":"spr_grocer_happy","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "NPCs",
