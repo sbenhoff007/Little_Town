@@ -20,6 +20,7 @@
     {"id":{"name":"snd_townBGM","path":"sounds/snd_townBGM/snd_townBGM.yy",},"order":14,},
     {"id":{"name":"spr_tree01","path":"sprites/spr_tree01/spr_tree01.yy",},"order":0,},
     {"id":{"name":"spr_fence01","path":"sprites/spr_fence01/spr_fence01.yy",},"order":3,},
+    {"id":{"name":"scr_sequenceControl","path":"scripts/scr_sequenceControl/scr_sequenceControl.yy",},"order":2,},
     {"id":{"name":"spr_player_walk_left","path":"sprites/spr_player_walk_left/spr_player_walk_left.yy",},"order":5,},
     {"id":{"name":"seq_teacher_happy","path":"sequences/seq_teacher_happy/seq_teacher_happy.yy",},"order":2,},
     {"id":{"name":"spr_emote_sweatBubble","path":"sprites/spr_emote_sweatBubble/spr_emote_sweatBubble.yy",},"order":5,},

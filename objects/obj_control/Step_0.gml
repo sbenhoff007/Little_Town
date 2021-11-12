@@ -28,5 +28,17 @@ switch sequenceState {
 		if (audio_is_playing(snd_townAmbience) && audio_sound_get_gain(snd_townAmbience) < townAmbienceVolume) {
 			audio_sound_gain(snd_townAmbience,townAmbienceVolume,60);
 		}
+		// Check if NPCs are "done"
+		if (global.gameOver == false) {
+			if (instance_exists(obj_npc_baker) && instance_exists(obj_npc_teacher) && instance_exists(obj_npc_grocer)) {
+				if (obj_npc_baker.myState == npcState.done && obj_npc_teacher.myState == npcState.done && obj_npc_grocer.myState == npcState.done) {
+					// Queue up "game over" sequence
+					global.playerControl = false;
+					alarm[0] = 60;
+					// Mark game as won
+					global.gameOver = true;
+				}
+			}
+		}
 	}; break;
 }
