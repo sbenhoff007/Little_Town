@@ -71,6 +71,7 @@
     {"id":{"name":"spr_player_walk_down","path":"sprites/spr_player_walk_down/spr_player_walk_down.yy",},"order":4,},
     {"id":{"name":"obj_item05","path":"objects/obj_item05/obj_item05.yy",},"order":5,},
     {"id":{"name":"spr_teacher_angry","path":"sprites/spr_teacher_angry/spr_teacher_angry.yy",},"order":4,},
+    {"id":{"name":"scr_gameControl","path":"scripts/scr_gameControl/scr_gameControl.yy",},"order":3,},
     {"id":{"name":"obj_npc_baker","path":"objects/obj_npc_baker/obj_npc_baker.yy",},"order":1,},
     {"id":{"name":"spr_title_youDidIt","path":"sprites/spr_title_youDidIt/spr_title_youDidIt.yy",},"order":3,},
     {"id":{"name":"obj_par_npc","path":"objects/obj_par_npc/obj_par_npc.yy",},"order":0,},
