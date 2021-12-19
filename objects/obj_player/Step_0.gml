@@ -59,89 +59,73 @@ if ((x_goto == 0 && y_goto == 0) || (vx == 0 && vy == 0)) {
     }
 }
 
-//// If Idle
-//if (vx == 0 && vy == 0) {
-//	myState = playerState.idle;
-//}
-
-//// If Idle
-//if (vx == 0 && vy == 0) {
-//	// Change idle Sprite based on last direction
-//	switch dir {
-//		case 0: sprite_index = spr_player_idle_right; break;
-//		case 1: sprite_index = spr_player_idle_up; break;
-//		case 2: sprite_index = spr_player_idle_left; break;
-//		case 3: sprite_index = spr_player_idle_down; break;
-//	}
-//}
-
 // If moving
-if (x_goto != 0 && y_goto != 0 && vx != 0 && vy != 0) {
-	if (os_type = os_android) {
-	    if !collision_point(x, y, obj_par_environment, true, true) {
-	        var _pd = point_distance(x, y, x_goto, y_goto);
-	        if (_pd > 5) {
-	            show_debug_message("move_towards_point x=" + string(x) + ", x_goto=" + string(x_goto));
-	            show_debug_message("move_towards_point y=" + string(y) + ", y_goto=" + string(y_goto));
-	            show_debug_message("point_distance=" + string(_pd));
+if (os_type = os_android && x_goto != 0 && y_goto != 0) {
+	var _pd = point_distance(x, y, x_goto, y_goto);
+    if !collision_point(x, y, obj_par_environment, true, true) {
+		if (_pd > 5) {
+            show_debug_message("move_towards_point x=" + string(x) + ", x_goto=" + string(x_goto));
+            show_debug_message("move_towards_point y=" + string(y) + ", y_goto=" + string(y_goto));
+            show_debug_message("point_distance=" + string(_pd));
 
-	            move_towards_point(x_goto, y_goto, walkSpeed + runSpeed);
-	        } else {
-	            show_debug_message("point reached, movement stopped.");
-	            x_goto = 0;
-	            y_goto = 0;
-	            speed = 0;
-	        }
-	    }
-	    //if !collision_point(x,y+y_goto,obj_par_environment,true,true) {		
-	    //	if (_pd > 5)
-	    //    {
-	    //		show_debug_message("move_towards_point x x=" + string(x) + ", vx=" + string(vx) + ", x_goto=" + string(x_goto));
-	    //		show_debug_message("move_towards_point x+vx y=" + string(y) + ", y_goto=" + string(y_goto));
-	    //		show_debug_message("point_distance=" + string(_pd));
-
-	    //		move_towards_point(x_goto ,y_goto, clamp(_pd, 0, walkSpeed+runSpeed));
-	    //    }
-	    //	else {
-	    //		show_debug_message("y+vy point reached, movement stopped.");
-	    //		x_goto = x;
-	    //		y_goto = y;
-	    //		walkSpeed = 0;	
-	    //		runSpeed = 0;
-	    //		speed = 0;
-	    //		myState = playerState.idle;
-	    //	}
-	    //}
-
-	    //if (!collision_point(x,y,obj_par_environment,true,true)  {		
-	    //	//var _pd = point_distance(x, y, x_goto, y_goto);
-	    //		if (_pd > 5)
-	    //	    {
-	    //			show_debug_message("move_towards_point y+vy x=" + string(x) + ", x_goto=" + string(x_goto));
-	    //			show_debug_message("move_towards_point y+vy y=" + string(y) + " y+vy=" + string(y+vy) + ", y_goto=" + string(y_goto));
-	    //			show_debug_message("point_distance=" + string(_pd));
-
-	    //			move_towards_point(x, y_goto, clamp(_pd, 0, 5));
-	    //	    }
-	    //		else {
-	    //			show_debug_message("y+vy point reached, movement stopped.");
-	    //			walkSpeed = 0;	
-	    //			runSpeed = 0;
-	    //			speed = 0;
-	    //		}
-	    //	}
-	    //	else y += vy;
-	    //}	
-	    //}
-	    else {
-	        if !collision_point(x + vx, y, obj_par_environment, true, true) {
-	            x += vx;
-	        }
-	        if !collision_point(x, y + vy, obj_par_environment, true, true) {
-	            y += vy;
-	        }
-	    }
+            move_towards_point(x_goto, y_goto, walkSpeed + runSpeed);
+        } else {
+            show_debug_message("point reached, movement stopped.");
+            x_goto = 0;
+            y_goto = 0;
+            speed = 0;
+        }
     }
+		
+    //if !collision_point(x,y+y_goto,obj_par_environment,true,true) {		
+    //	if (_pd > 5)
+    //    {
+    //		show_debug_message("move_towards_point x x=" + string(x) + ", vx=" + string(vx) + ", x_goto=" + string(x_goto));
+    //		show_debug_message("move_towards_point x+vx y=" + string(y) + ", y_goto=" + string(y_goto));
+    //		show_debug_message("point_distance=" + string(_pd));
+
+    //		move_towards_point(x_goto ,y_goto, clamp(_pd, 0, walkSpeed+runSpeed));
+    //    }
+    //	else {
+    //		show_debug_message("y+vy point reached, movement stopped.");
+    //		x_goto = x;
+    //		y_goto = y;
+    //		walkSpeed = 0;	
+    //		runSpeed = 0;
+    //		speed = 0;
+    //		myState = playerState.idle;
+    //	}
+    //}
+
+    //if (!collision_point(x,y,obj_par_environment,true,true)  {		
+    //	//var _pd = point_distance(x, y, x_goto, y_goto);
+    //		if (_pd > 5)
+    //	    {
+    //			show_debug_message("move_towards_point y+vy x=" + string(x) + ", x_goto=" + string(x_goto));
+    //			show_debug_message("move_towards_point y+vy y=" + string(y) + " y+vy=" + string(y+vy) + ", y_goto=" + string(y_goto));
+    //			show_debug_message("point_distance=" + string(_pd));
+
+    //			move_towards_point(x, y_goto, clamp(_pd, 0, 5));
+    //	    }
+    //		else {
+    //			show_debug_message("y+vy point reached, movement stopped.");
+    //			walkSpeed = 0;	
+    //			runSpeed = 0;
+    //			speed = 0;
+    //		}
+    //	}
+    //	else y += vy;
+    //}	
+    
+    else if ((os_type != os_android) && (vx != 0 || vy != 0)) {
+        if !collision_point(x + vx, y, obj_par_environment, true, true) {
+            x += vx;
+        }
+        if !collision_point(x, y + vy, obj_par_environment, true, true) {
+            y += vy;
+        }
+    }
+    //}
     // Change direction based on movement
     if (vx > 0) {
         dir = 0;
@@ -164,28 +148,6 @@ if (x_goto != 0 && y_goto != 0 && vx != 0 && vy != 0) {
     else {
         myState = playerState.carrying;
     }
-
-
-    //// Change walking Sprite based on direction
-    //if (vx > 0) {
-    //	sprite_index = spr_player_walk_right;
-    //	dir = 0;
-    //}
-    //if (vx < 0) {
-    //	sprite_index = spr_player_walk_left;
-    //	dir = 2;
-    //}
-    //if (vy > 0) {
-    //	sprite_index = spr_player_walk_down;
-    //	dir = 3;
-    //}
-    //if (vy < 0) {
-    //	sprite_index = spr_player_walk_up;
-    //	dir = 1;
-    //}
-
-    //// Move audio listener with me
-    //audio_listener_set_position(0,x,y,0);
 
     // Set my listener if Sequence is playing
     if (instance_exists(obj_control) && obj_control.sequenceState == seqState.playing) {
@@ -221,7 +183,6 @@ if !nearbyNPC {
     }
     // Get rid of prompt
     scr_dismissPrompt(npcPrompt, 0);
-    //show_debug_message("obj_player hasn't found anything");
 }
 
 // Check for collision with Items
