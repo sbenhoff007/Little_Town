@@ -45,7 +45,7 @@ vx = ((moveRight - moveLeft) * (walkSpeed + runSpeed) * (1 - carryLimit));
 vy = ((moveDown - moveUp) * (walkSpeed + runSpeed) * (1 - carryLimit));
 
 // If Idle
-if ((x_goto == 0 && y_goto == 0) || (vx == 0 && vy == 0)) {
+if ((os_type != os_android && vx == 0 && vy == 0) || (os_type == os_android && x_goto == 0 && y_goto == 0)) {
     // If I'm not picking up or putting down an item
     if (myState != playerState.pickingUp && myState != playerState.puttingDown) {
         // If we don't have an item
@@ -60,11 +60,12 @@ if ((x_goto == 0 && y_goto == 0) || (vx == 0 && vy == 0)) {
 }
 
 // If moving
+if (vx != 0 || vy != 0) {
 if (os_type = os_android && x_goto != 0 && y_goto != 0) {
 	var _pd = point_distance(x, y, x_goto, y_goto);
-	var _collisionCheck = 12;
-    if !collision_point(x+_collisionCheck, y+_collisionCheck, obj_par_environment, true, true) {
-		if (_pd > 5) {
+	var _collisionCheck = 25;
+    if (!collision_point(x, y, obj_par_environment, true, true)) {
+		if (_pd > 10) {
             show_debug_message("move_towards_point x=" + string(x) + ", x_goto=" + string(x_goto));
             show_debug_message("move_towards_point y=" + string(y) + ", y_goto=" + string(y_goto));
             show_debug_message("point_distance=" + string(_pd));
@@ -82,66 +83,30 @@ if (os_type = os_android && x_goto != 0 && y_goto != 0) {
             speed = 0;
         }
     }
-	else if collision_point(x+_collisionCheck, y+_collisionCheck, obj_par_environment, true, true) {
-		show_debug_message("collision detected, movement stopped.");
-		show_debug_message("x=" + string(x) + ", x_goto=" + string(x_goto));
-        show_debug_message("y=" + string(y) + ", y_goto=" + string(y_goto));
-        show_debug_message("point_distance=" + string(_pd));
+	else {
+		//if (myState != playerState.carrying || myState != playerState.carryIdle) {
+			show_debug_message("collision detected, movement stopped.");
+			show_debug_message("x=" + string(x) + ", x_goto=" + string(x_goto));
+	        show_debug_message("y=" + string(y) + ", y_goto=" + string(y_goto));
+	        show_debug_message("point_distance=" + string(_pd));
         
-		x += _collisionCheck - 1;
-        y += _collisionCheck - 1;
-        speed = 0;        
+			x_goto = 0;
+	        y_goto = 0;
+			x += _collisionCheck;
+			y += _collisionCheck;
+	        speed = 0; 
+		//}
     }
-//}
+}
 		
-    //if !collision_point(x,y+y_goto,obj_par_environment,true,true) {		
-    //	if (_pd > 5)
-    //    {
-    //		show_debug_message("move_towards_point x x=" + string(x) + ", vx=" + string(vx) + ", x_goto=" + string(x_goto));
-    //		show_debug_message("move_towards_point x+vx y=" + string(y) + ", y_goto=" + string(y_goto));
-    //		show_debug_message("point_distance=" + string(_pd));
-
-    //		move_towards_point(x_goto ,y_goto, clamp(_pd, 0, walkSpeed+runSpeed));
-    //    }
-    //	else {
-    //		show_debug_message("y+vy point reached, movement stopped.");
-    //		x_goto = x;
-    //		y_goto = y;
-    //		walkSpeed = 0;	
-    //		runSpeed = 0;
-    //		speed = 0;
-    //		myState = playerState.idle;
-    //	}
-    //}
-
-    //if (!collision_point(x,y,obj_par_environment,true,true)  {		
-    //	//var _pd = point_distance(x, y, x_goto, y_goto);
-    //		if (_pd > 5)
-    //	    {
-    //			show_debug_message("move_towards_point y+vy x=" + string(x) + ", x_goto=" + string(x_goto));
-    //			show_debug_message("move_towards_point y+vy y=" + string(y) + " y+vy=" + string(y+vy) + ", y_goto=" + string(y_goto));
-    //			show_debug_message("point_distance=" + string(_pd));
-
-    //			move_towards_point(x, y_goto, clamp(_pd, 0, 5));
-    //	    }
-    //		else {
-    //			show_debug_message("y+vy point reached, movement stopped.");
-    //			walkSpeed = 0;	
-    //			runSpeed = 0;
-    //			speed = 0;
-    //		}
-    //	}
-    //	else y += vy;
-    //}	
-    
-    //else if ((os_type != os_android) && (vx != 0 || vy != 0)) {
-    //    if !collision_point(x + vx, y, obj_par_environment, true, true) {
-    //        x += vx;
-    //    }
-    //    if !collision_point(x, y + vy, obj_par_environment, true, true) {
-    //        y += vy;
-    //    }
-    //}
+   else if ((os_type != os_android) && (vx != 0 || vy != 0)) {
+        if !collision_point(x + vx, y, obj_par_environment, true, true) {
+            x += vx;
+        }
+        if !collision_point(x, y + vy, obj_par_environment, true, true) {
+            y += vy;
+        }
+    }
     //}
     // Change direction based on movement
     if (vx > 0) {

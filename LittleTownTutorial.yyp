@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"scr_objPlayerInteraction","path":"scripts/scr_objPlayerInteraction/scr_objPlayerInteraction.yy",},"order":5,},
     {"id":{"name":"obj_npc_teacher","path":"objects/obj_npc_teacher/obj_npc_teacher.yy",},"order":2,},
     {"id":{"name":"spr_player_walk_right","path":"sprites/spr_player_walk_right/spr_player_walk_right.yy",},"order":6,},
     {"id":{"name":"spr_grocer_sad","path":"sprites/spr_grocer_sad/spr_grocer_sad.yy",},"order":4,},
