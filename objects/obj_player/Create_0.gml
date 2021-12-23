@@ -24,6 +24,8 @@ running = false;
 startDust = 0;
 x_goto = 0;
 y_goto = 0;
+drag_offsetX = 0;
+drag_offsetY = 0;
 
 // Create listener and set orientation
 audio_listener_set_position(0,x,y,0);

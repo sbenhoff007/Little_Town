@@ -29,3 +29,15 @@ function scr_dismissPrompt(_whichPrompt,_toReset) {
 		}
 	}
 }
+
+function scr_promptFadeOut() {
+	// Begin fade out
+	if (fadeMe == 1) {
+		fadeMe = 2;
+	}
+	/*
+	//// Old code
+	// Queue my destruction
+	alarm[0] = 2;
+	*/	
+}

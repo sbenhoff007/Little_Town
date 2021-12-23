@@ -1,3 +1,4 @@
 /// @description Tap to play
-scr_startGameplay();
-
+if (room = rm_mainTitle) {
+	scr_startGameplay();
+}
